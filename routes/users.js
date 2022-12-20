@@ -19,6 +19,8 @@ router.post('/',[
     validateFields
 ] ,addUser)
 
+
+
 router.delete('/:id', [
     validateJWT,
     // isAdminRol,
@@ -33,7 +35,7 @@ router.put('/:id', [
     check('password', 'El password debe de ser más de 6 letras').isLength({ min: 6, max: 12 }),
     check('name','Name is mandatory').not().isEmpty(),
     check('rol').custom( isValidRol),
-    validateFields
+validateFields
 ]
 ,updateUser)
 
