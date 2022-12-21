@@ -3,7 +3,7 @@ const router=express.Router()
 const {uploadFile} = require ('../controllers/uploadFile')
 
 
-router.post('/upload',uploadFile);
+router.post('/',uploadFile);
 
 
 module.exports=router
